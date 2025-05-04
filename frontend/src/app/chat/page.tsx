@@ -1,10 +1,10 @@
 'use client';
 
-import Chat from './components/Chat';
+import Chat from '../components/Chat';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-export default function Home() {
+export default function ChatPage() {
   const [loading, setLoading] = useState(true);
   const [authorized, setAuthorized] = useState(false);
   const router = useRouter();

@@ -1,6 +1,6 @@
 services:
-  front:
-    container_name: front-chat
+  frontend:
+    container_name: frontend
     build:
       context: ./frontend
     ports:
@@ -12,10 +12,10 @@ services:
       - NODE_ENV=development
     command: npm run dev
     depends_on:
-      - back-chat
+      - backend
 
-  back:
-    container_name: back-chat
+  backend:
+    container_name: backend
     build:
       context: ./backend
     ports:
